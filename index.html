@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's for Dinner?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>What's for Dinner?</h1>
+      <p>Знайдіть рецепти на основі ваших інгредієнтів!</p>
+    </header>
+    <main>
+      <form id="search-form">
+        <label for="ingredients">Введіть інгредієнти (через кому):</label>
+        <input
+          type="text"
+          id="ingredients"
+          placeholder="Наприклад: картопля, яйця, сир"
+        />
+        <button type="submit">Шукати рецепти</button>
+      </form>
+      <section id="recipes">
+        <h2>Результати:</h2>
+        <ul id="recipes-list"></ul>
+      </section>
+    </main>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
