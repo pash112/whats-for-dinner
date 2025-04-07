@@ -18,7 +18,15 @@ form.addEventListener("submit", async (event) => {
     recipesList.innerHTML = recipes
       .map(
         (recipe) =>
-          `<li><h3>${recipe.title}</h3><img src="${recipe.image}" alt="${recipe.title}" /></li>`
+          `<li>
+            <h3>${recipe.title}</h3>
+            <img src="${recipe.image}" alt="${recipe.title}" />
+            <a href="https://spoonacular.com/recipes/${recipe.title
+              .replace(/\s+/g, "-")
+              .toLowerCase()}-${
+            recipe.id
+          }" target="_blank">Переглянути рецепт</a>
+          </li>`
       )
       .join("");
   } catch (error) {
